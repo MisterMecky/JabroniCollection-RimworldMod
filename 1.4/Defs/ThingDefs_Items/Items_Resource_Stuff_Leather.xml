@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="LeatherBase">
+        <defName>Leather_Bunglepuss</defName>
+        <label>bungleleather</label>
+        <graphicData>
+          <color>(103,196,183)</color>
+        </graphicData>
+        <stuffProps>
+          <color>(103,196,183)</color>
+          <commonality>0.01</commonality>
+        </stuffProps>
+      </ThingDef>
+
+      <ThingDef ParentName="LeatherBase">
+        <defName>Leather_Squandog</defName>
+        <label>squandleather</label>
+        <graphicData>
+          <color>(247,147,30)</color>
+        </graphicData>
+        <stuffProps>
+          <color>(247,147,30)</color>
+          <commonality>0.01</commonality>
+        </stuffProps>
+      </ThingDef>
+
+</Defs>
