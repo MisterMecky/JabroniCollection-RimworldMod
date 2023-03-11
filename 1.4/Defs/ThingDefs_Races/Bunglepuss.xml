@@ -56,6 +56,12 @@
 		  <soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
 		  <soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
 		  <soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		  <headPosPerRotation>
+			<li>(0.02, 0, 0.23)</li>
+			<li>(0.35, 0, 0.05)</li>
+			<li>(0.0, 0, -0.185)</li>
+			<li>(-0.35, 0, 0.05)</li>
+		  </headPosPerRotation>
 		</race>
 		<tradeTags>
 		  <li>AnimalCommon</li>

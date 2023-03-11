@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="MakeableDrugBase">
+    <defName>Quaaludes</defName>
+    <label>quaaludes</label>
+    <description>TODO</description>
+    <descriptionHyperlinks>
+      <HediffDef>QuaaludeHigh</HediffDef>
+      <HediffDef>QuaaludeTolerance</HediffDef>
+      <HediffDef>QuaaludeAddiction</HediffDef>
+      <HediffDef>ChemicalDamageSevere</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Things/Item/Drug/Quaaludes</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <drawSize>0.75</drawSize>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <statBases>
+      <WorkToMake>350</WorkToMake>
+      <MarketValue>21</MarketValue>
+      <Mass>0.05</Mass>
+    </statBases>
+    <techLevel>Industrial</techLevel>
+    <minRewardCount>10</minRewardCount>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <joyKind>Chemical</joyKind>
+      <joy>0.80</joy>
+      <drugCategory>Hard</drugCategory>
+      <baseIngestTicks>100</baseIngestTicks>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <ingestHoldOffsetStanding>
+        <northDefault>
+          <offset>(0.21,0,0.05)</offset>
+        </northDefault>
+      </ingestHoldOffsetStanding>
+      <ingestHoldUsesTable>false</ingestHoldUsesTable>
+      <ingestCommandString>Take {0}</ingestCommandString>
+      <ingestReportString>Taking {0}.</ingestReportString>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>QuaaludeHigh</hediffDef>
+          <severity>0.75</severity>
+          <toleranceChemical>Quaaludes</toleranceChemical>
+        </li>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>QuaaludeTolerance</hediffDef>
+          <severity>0.040</severity>
+          <divideByBodySize>true</divideByBodySize>
+          <multiplyByGeneToleranceFactors>true</multiplyByGeneToleranceFactors>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>PsychiteRefining</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+      <soundWorking>Recipe_Drug</soundWorking>
+    </recipeMaker>
+    <costList>
+      <PsychoidLeaves>8</PsychoidLeaves>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>Quaaludes</chemical>
+        <addictiveness>0.01</addictiveness>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>100</listOrder>
+        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.01</largeOverdoseChance>
+      </li>
+    </comps>
+    <allowedArchonexusCount>200</allowedArchonexusCount>
+  </ThingDef>
+
+  <HediffDef>
+    <defName>QuaaludeHigh</defName>
+    <label>high on Quaaludes</label>
+    <labelNoun>a Quaaludes high</labelNoun>
+    <description>TODO</description>
+    <hediffClass>Hediff_High</hediffClass>
+    <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+    <scenarioCanAdd>true</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.5</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <painFactor>0.5</painFactor>
+          <statFactors>
+            <RestFallRateFactor>0.33</RestFallRateFactor>
+          </statFactors>
+          <capMods>
+            <li>
+              <capacity>Moving</capacity>
+              <offset>0.15</offset>
+            </li>
+          </capMods>
+        </li>
+      </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>QuaaludeHigh</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>QuaaludeHigh</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <label>high on Quaaludes</label>
+        <description>TODO</description>
+        <baseMoodEffect>35</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <!-- Quaaludes addiction -->
+  
+  <ChemicalDef>
+    <defName>Quaaludes</defName>
+    <label>quaalude</label>
+    <addictionHediff>QuaaludeAddiction</addictionHediff>
+    <toleranceHediff>QuaaludeTolerance</toleranceHediff>
+    <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+    <onGeneratedAddictedEvents>
+      <li>
+        <hediff>ChemicalDamageSevere</hediff>
+        <chance>0.15</chance>
+        <partsToAffect>
+          <li>Kidney</li>
+        </partsToAffect>
+      </li>
+    </onGeneratedAddictedEvents>
+    <geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
+    <geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
+    <geneOverdoseChanceFactorResist>0.5</geneOverdoseChanceFactorResist>
+    <geneOverdoseChanceFactorImmune>0</geneOverdoseChanceFactorImmune>
+  </ChemicalDef>
+  
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Quaalude</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>quaalude</label>
+    <description>Because of a quaalude addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+    <listPriority>50</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>QuaaludeTolerance</defName>
+    <label>quaalude tolerance</label>
+    <description>A built-up tolerance to quaalude. The more severe this tolerance is, the more Quaaludes it takes to get the same effect.</description>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.015</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Quaaludes</chemical>
+      </li>
+    </comps>
+    <hediffGivers>
+      <li Class="HediffGiver_RandomDrugEffect">
+        <hediff>ChemicalDamageSevere</hediff>
+        <severityToMtbDaysCurve>
+          <points>
+            <li>(0.45, 99999)</li>
+            <li>(0.5, 180)</li>
+            <li>(1, 135)</li>
+          </points>
+        </severityToMtbDaysCurve>
+        <partsToAffect>
+          <li>Kidney</li>
+        </partsToAffect>
+      </li>
+    </hediffGivers>
+  </HediffDef>
+  
+  <HediffDef ParentName="AddictionBase">
+    <defName>QuaaludeAddiction</defName>
+    <label>quaalude addiction</label>
+    <description>A chemical addiction to quaalude. Long-term presence of Quaaludes has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.
+\nWithout regular doses of Quaaludes, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <causesNeed>Chemical_Quaalude</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.0333</severityPerDay>
+        <showDaysToRecover>true</showDaysToRecover>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+        <socialFightChanceFactor>3.0</socialFightChanceFactor>
+        <statOffsets>
+          <RestFallRateFactor>0.3</RestFallRateFactor>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.20</offset>
+          </li>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>-0.20</offset>
+          </li>
+        </capMods>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Binging_DrugExtreme</mentalState>
+            <mtbDays>40</mtbDays>
+          </li>
+          <li>
+            <mentalState>Wander_Psychotic</mentalState>
+            <mtbDays>10</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>QuaaludeWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>QuaaludeAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>quaalude withdrawal</label>
+        <description>TODO</description>
+        <baseMoodEffect>-35</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+</Defs>

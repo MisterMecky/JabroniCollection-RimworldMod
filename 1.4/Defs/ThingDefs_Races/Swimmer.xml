@@ -6,19 +6,18 @@
 		<label>swimmer</label>
 		<description>One of mankind's first pets, the cat is a small mammal which hunts vermin. Known for their aloofness, cats are nevertheless popular companions because of their independence, calm disposition, and fine, pettable fur.</description>
 		<statBases>
-		  <MoveSpeed>4.4</MoveSpeed>
+		  <MoveSpeed>4.0</MoveSpeed>
 		  <MarketValue>100</MarketValue>
 		  <ComfyTemperatureMin>-25</ComfyTemperatureMin>
 		</statBases>
 		<race>
-		  <body>QuadrupedAnimalWithPawsAndTail</body>
-		  <predator>true</predator>
+		  <body>JabroniHumanlikeAnimal</body>
 		  <baseBodySize>0.32</baseBodySize>
 		  <maxPreyBodySize>0.25</maxPreyBodySize>
 		  <baseHungerRate>0.15</baseHungerRate>
 		  <baseHealthScale>0.42</baseHealthScale>
 		  <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
-		  <leatherDef>Cloth</leatherDef>
+		  <leatherDef>Leather_Light</leatherDef>
 		  <wildness>0</wildness>
 		  <petness>1</petness>
 		  <trainability>None</trainability>
@@ -62,68 +61,44 @@
 		  <li>AnimalPet</li>
 		</tradeTags>
 		<tools>
-		  <li>
-			<label>left claw</label>
-			<capacities>
-			  <li>Scratch</li>
-			</capacities>
-			<power>6</power>
-			<cooldownTime>1.5</cooldownTime>
-			<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
-			<surpriseAttack>
-			  <extraMeleeDamages>
-				<li>
-				  <def>Stun</def>
-				  <amount>14</amount>
-				</li>
-			  </extraMeleeDamages>
-			</surpriseAttack>
-		  </li>
-		  <li>
-			<label>right claw</label>
-			<capacities>
-			  <li>Scratch</li>
-			</capacities>
-			<power>6</power>
-			<cooldownTime>1.5</cooldownTime>
-			<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
-			<surpriseAttack>
-			  <extraMeleeDamages>
-				<li>
-				  <def>Stun</def>
-				  <amount>14</amount>
-				</li>
-			  </extraMeleeDamages>
-			</surpriseAttack>
-		  </li>
-		  <li>
-			<capacities>
-			  <li>Bite</li>
-			</capacities>
-			<power>7</power>
-			<cooldownTime>2</cooldownTime>
-			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-			<chanceFactor>0.7</chanceFactor>
-			<surpriseAttack>
-			  <extraMeleeDamages>
-				<li>
-				  <def>Stun</def>
-				  <amount>14</amount>
-				</li>
-			  </extraMeleeDamages>
-			</surpriseAttack>
-		  </li>
-		  <li>
-			<label>head</label>
-			<capacities>
-			  <li>Blunt</li>
-			</capacities>
-			<power>3</power>
-			<cooldownTime>2</cooldownTime>
-			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-			<chanceFactor>0.2</chanceFactor>
-		  </li>
+			<li>
+				<label>left fist</label>
+				<capacities>
+				<li>Blunt</li>
+				</capacities>
+				<power>3.6</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+				<li>Blunt</li>
+				</capacities>
+				<power>3.6</power>
+				<cooldownTime>1.5</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<capacities>
+				<li>Bite</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.7</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+				<li>Blunt</li>
+				</capacities>
+				<power>2</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
 		</tools>
 	  </ThingDef>
 	  

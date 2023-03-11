@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>JM_Apparel_VenetianMask</defName>
+    <label>venetian mask</label>
+    <description>A hard facial mask that resembles a stylized face.</description>
+    <techLevel>Neolithic</techLevel>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/VenetianMask/VenetianMask</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <costList>
+      <Cloth>1</Cloth>
+      <Steel>40</Steel>
+    </costList>
+    <costStuffCount>15</costStuffCount>
+    <statBases>
+      <WorkToMake>2000</WorkToMake>
+      <MaxHitPoints>90</MaxHitPoints>
+      <Mass>0.1</Mass>
+      <EquipDelay>1.5</EquipDelay>
+      <ArmorRating_Sharp>0.08</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.05</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.05</ArmorRating_Heat>
+      <Insulation_Cold>2</Insulation_Cold>
+      <Insulation_Heat>2</Insulation_Heat>
+    </statBases>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/VenetianMask/VenetianMask</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <hatRenderedFrontOfFace>true</hatRenderedFrontOfFace>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+    </apparel>
+    <tradeTags>
+      <li>Clothing</li>
+      <li>Armor</li>
+    </tradeTags>
+    <recipeMaker>
+      <displayPriority>155</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>
