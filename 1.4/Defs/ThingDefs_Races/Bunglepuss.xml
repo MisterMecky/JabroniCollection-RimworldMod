@@ -4,7 +4,7 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>Bunglepuss</defName>
 		<label>bunglepuss</label>
-		<description>One of mankind's first pets, the cat is a small mammal which hunts vermin. Known for their aloofness, cats are nevertheless popular companions because of their independence, calm disposition, and fine, pettable fur.</description>
+		<description>TODO</description>
 		<statBases>
 		  <MoveSpeed>4.4</MoveSpeed>
 		  <MarketValue>100</MarketValue>
@@ -145,27 +145,27 @@
 			<labelPlural>bunglepuss kittens</labelPlural>
 			<bodyGraphicData>
 				<texPath>Things/Pawn/Animal/Bunglepuss/Bunglepuss</texPath>
-			  <drawSize>0.6</drawSize>
+			  <drawSize>0.5</drawSize>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Things/Pawn/Animal/Cat/Dessicated_Cat</texPath>
-			  <drawSize>0.6</drawSize>
+			  <drawSize>0.5</drawSize>
+			</dessicatedBodyGraphicData>
+		  </li>
+		  <li>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/Animal/Bunglepuss/Bunglepuss</texPath>
+			  <drawSize>0.65</drawSize>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+			  <texPath>Things/Pawn/Animal/Cat/Dessicated_Cat</texPath>
+			  <drawSize>0.65</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
 			<bodyGraphicData>
 				<texPath>Things/Pawn/Animal/Bunglepuss/Bunglepuss</texPath>
 			  <drawSize>0.8</drawSize>
-			</bodyGraphicData>
-			<dessicatedBodyGraphicData>
-			  <texPath>Things/Pawn/Animal/Cat/Dessicated_Cat</texPath>
-			  <drawSize>0.8</drawSize>
-			</dessicatedBodyGraphicData>
-		  </li>
-		  <li>
-			<bodyGraphicData>
-				<texPath>Things/Pawn/Animal/Bunglepuss/Bunglepuss</texPath>
-			  <drawSize>1.0</drawSize>
 			  <shadowData>
 				<volume>(0.25, 0.3, 0.25)</volume>
 				<offset>(0,0,-0.15)</offset>
@@ -173,7 +173,7 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Things/Pawn/Animal/Cat/Dessicated_Cat</texPath>
-			  <drawSize>1.0</drawSize>
+			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		</lifeStages>

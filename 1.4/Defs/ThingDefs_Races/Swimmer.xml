@@ -4,7 +4,7 @@
 	<ThingDef ParentName="AnimalThingBase">
 		<defName>Swimmer</defName>
 		<label>swimmer</label>
-		<description>One of mankind's first pets, the cat is a small mammal which hunts vermin. Known for their aloofness, cats are nevertheless popular companions because of their independence, calm disposition, and fine, pettable fur.</description>
+		<description>TODO</description>
 		<statBases>
 		  <MoveSpeed>4.0</MoveSpeed>
 		  <MarketValue>100</MarketValue>
@@ -20,7 +20,7 @@
 		  <leatherDef>Leather_Light</leatherDef>
 		  <wildness>0</wildness>
 		  <petness>1</petness>
-		  <trainability>None</trainability>
+		  <trainability>Advanced</trainability>
 		  <nuzzleMtbHours>12</nuzzleMtbHours>
 		  <gestationPeriodDays>10</gestationPeriodDays>
 		  <nameOnTameChance>1</nameOnTameChance>
@@ -114,17 +114,17 @@
 			<labelPlural>swimmer kittens</labelPlural>
 			<bodyGraphicData>
 				<texPath>Things/Pawn/Animal/Swimmer/Swimmer</texPath>
-			  <drawSize>0.4</drawSize>
+			  <drawSize>0.5</drawSize>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Things/Pawn/Animal/Cat/Dessicated_Cat</texPath>
-			  <drawSize>0.4</drawSize>
+			  <drawSize>0.5</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		  <li>
 			<bodyGraphicData>
 				<texPath>Things/Pawn/Animal/Swimmer/Swimmer</texPath>
-			  <drawSize>0.55</drawSize>
+			  <drawSize>0.65</drawSize>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Things/Pawn/Animal/Cat/Dessicated_Cat</texPath>
@@ -134,7 +134,7 @@
 		  <li>
 			<bodyGraphicData>
 				<texPath>Things/Pawn/Animal/Swimmer/Swimmer</texPath>
-			  <drawSize>0.7</drawSize>
+			  <drawSize>0.8</drawSize>
 			  <shadowData>
 				<volume>(0.25, 0.3, 0.25)</volume>
 				<offset>(0,0,-0.15)</offset>
@@ -142,7 +142,7 @@
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 			  <texPath>Things/Pawn/Animal/Cat/Dessicated_Cat</texPath>
-			  <drawSize>0.7</drawSize>
+			  <drawSize>0.8</drawSize>
 			</dessicatedBodyGraphicData>
 		  </li>
 		</lifeStages>
